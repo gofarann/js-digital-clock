@@ -36,20 +36,21 @@ $(document).ready(function() {
 // seconds
 var displaySecs = function() {
   var time = new Date();
-  var ampm = time.getHours() >= 12 ? ' PM' : ' AM';
+  var ampm = time.getHours() >= 12 ? 'PM' : 'AM';
   var zero = time.getSeconds() < 10 ? '0' : '';
 
   timeString = '<h1>' + time.getHours() + ":" + time.getMinutes() +  ":" + zero + time.getSeconds() + ampm + '</h1>';
-  $("#seconds").append(timeString);
-};
 
-var removeSecs = function() {
-  $("#seconds").children('h1').remove();
+  $("#clock").html(timeString);
 };
+//
+// var removeSecs = function() {
+//   $("#seconds").children('h1').remove();
+// };
 
 
 var t = setInterval(displaySecs, 1000);
-var x = setInterval(removeSecs, 999);
+// var x = setInterval(removeSecs, 999);
 
 
 
