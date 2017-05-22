@@ -1,7 +1,7 @@
 // Your code here
 $(document).ready(function() {
 
-var displaySecs = function() {
+var displayTime = function() {
   var time = new Date();
   var ampm = time.getHours() >= 12 ? 'PM' : 'AM';
   var secondZero = time.getSeconds() < 10 ? '0' : '';
@@ -13,7 +13,7 @@ var displaySecs = function() {
   $("#clock").html(timeString);
 };
 
-var t = setInterval(displaySecs, 1000);
+var t = setInterval(displayTime, 1000);
 
 
 
